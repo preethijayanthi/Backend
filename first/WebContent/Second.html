@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Case</title>
+<meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+  <script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "index.html",
+    })
+    .when("/register", {
+        templateUrl : "register.html",
+        controller : "registerCtrl"
+    })
+    .when("/login", {
+        templateUrl : "login.html",
+        controller : "loginCtrl"
+    });
+});
+
+app.controller("registerCtrl", function ($scope) {
+
+});
+app.controller("loginCtrl", function ($scope) {
+});
+
+</script>
+  
+</head>
+<header ng-include="'header.html'"></header>
+ <body ng-app="myApp">
+ 
+ <div ng-view></div>
+
+  
+</body>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  
+<footer ng-include="'footer.html'"></footer>
+</html>
